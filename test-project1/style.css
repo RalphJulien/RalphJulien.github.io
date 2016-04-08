@@ -33,11 +33,17 @@ h1{
   background-size: cover;
 
 }
-#title{
-  margin-top: 5px;
-  margin-left: 30px;
-  background-image: url('img/parasite-title.png');
+h1 {
+  font-size: 48;
+  font-family: arial;
+  color: green;
 }
+
+header {
+  text-align: center;
+  color: green;
+}
+
 #wrapper{
   position: center;
   width: 900px;
@@ -76,14 +82,14 @@ h1{
 }
 #block {
   position: absolute;
-  width: 900px;
-  height: 375px;
+  width: 950px;
+  height: 550px;
   margin: auto;
   background-image: url('img/background-image1.jpg');
   background-size: cover;
   background-position: center;
   display: block;
-  cursor: url("img/target-cursor.cur"), auto;
+  /*cursor: url("img/target-cursor.png"), auto;*/
 }
 #block .p1{
   font-family: arial;
@@ -103,14 +109,14 @@ h1{
   float: bottom;
 }
 #block.hit {
-  width: 900px;
-  height: 375px;
+  width: 950px;
+  height: 550px;
   margin: auto;
   background-image: url('img/background-image2.jpg');
   background-size: cover;
   background-position: center;
   display: block;
-  cursor: url("img/target-cursor.cur"), auto;
+  /*cursor: url("img/target-cursor.png"), auto;*/
 }
 .missileUp {
   position: absolute;
@@ -173,7 +179,7 @@ h1{
 }
 .hitsploded {
   position: absolute;
-  background-image: url('img/explosion1.png');
+  background-image: url('img/green-splat.png');
   background-position: center;
   background-repeat: no-repeat;
   width: 32px;
@@ -183,7 +189,7 @@ h1{
 }
 .hitsploded2 {
   position: absolute;
-  background-image: url('img/explosion2.png');
+  background-image: url('img/green-splat.png');
   background-position: center;
   background-repeat: no-repeat;
   width: 40px;
@@ -193,7 +199,7 @@ h1{
 }
 .hitsploded2 {
   position: absolute;
-  background-image: url('img/explosion2.png');
+  background-image: url('img/green-splat.png');
   background-position: center;
   background-repeat: no-repeat;
   width: 40px;
