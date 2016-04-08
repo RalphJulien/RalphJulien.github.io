@@ -110,7 +110,7 @@ jQuery(function() {
         //
       missile.animate({
         'left': +vector(angle, launchPoint) + 'px',
-        'top': '+300px'
+        'top': '+450px'
       }, speed);
       //launch missile end
       setTimeout(function() {
