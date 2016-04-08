@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <title>PARASITE</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="jquery.js"></script>
 </head>
 <body>
+<header>
+<img src="img/title.png" id="title">
+</header>
+<div id="background">
+<div id="wrapper">
+<div id="block">
+<div id="loadScreen">
+<p>The year is 2099. Intruder organisms have begun a full-scale invasion of Earth. The hive is targeting densely populated urban centers. You must contain the infection before mass assimilation.</p>
 
+<p>CLICK HERE to initiate defensive maneuvers!</p>
+<p>(Instructions: Click to destroy intruder organisms before they hit the city! Each sucessful intercept depletes the swarm's score by 10 points and increases the city's score, while each hit on the city decreases our score by 10 points. If the city reaches zero, the swarm will be unstoppable!)</p>
+</div>
+<div id="endMessageWon">
+<p>SUCCESS!</p>
+<p>You have effectively contained the infection here! Meanwhile, other cities around the globe are still fending off the invaders.</p>
+<p>Refresh page to play again!</p>
+</div>
+<div id="endMessageLost">
+<p>CONTAINMENT FAILED!</p>
+<p>Initiating Protocol 10. Infection cannot be allowed to spread.</p>
+<p>Refresh page to play again!</p>
+</div>
+<p class="p1">HUMANS Score: 300</p>
+<p class="p2">PARASITES Score: 600</p>
+<p class="pTimer"><time>00:00</time></p>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
