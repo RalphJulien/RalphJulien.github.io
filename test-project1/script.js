@@ -8,9 +8,9 @@ jQuery(function() {
   var parasiteScoreTag = $('#block .p2');
   var wonMessage = $('#endMessageWon');
   var lostMessage = $('#endMessageLost');
-  var hitSound = document.createElement('audio');
-    hitSound.setAttribute('src', '../audio/18624.mp3');
-    hitSound.setAttribute('autoplay', 'autoplay');
+  // var hitSound = document.createElement('audio');
+    // hitSound.setAttribute('src', '../audio/18624.mp3');
+    // hitSound.setAttribute('autoplay', 'autoplay');
   time.hide();
   humanScoreTag.hide();
   parasiteScoreTag.hide();
@@ -67,7 +67,7 @@ jQuery(function() {
   }
   var decreaseHumanScore = function() {
     humanScore = humanScore - 10;
-    console.log("Humans Score: " + americaScore);
+    console.log("Humans Score: " + humanScore);
     humanScoreTag.text("HUMAN RACE Score: " + humanScore);
   }
   var decreaseParasiteScore = function() {
@@ -140,7 +140,7 @@ jQuery(function() {
         // missile impact end
         // click missile begin
       missile.click(function() {
-        hitSound.play();
+        // hitSound.play();
         decreaseParasiteScore();
         increaseHumanScore();
         checkHumanWin();
