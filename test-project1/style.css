@@ -2,7 +2,7 @@ body, html {
   width: 100%; height: 100%;
   margin: 0;
   background-color: black;
-  background-image: url('/img/background-image1.png');
+  background-image: url('/img/cityscape-metropolis.gif');
   background-size: cover;
   background-position: center;
   image-rendering:optimizeSpeed;
@@ -86,7 +86,7 @@ header {
   width: 950px;
   height: 550px;
   margin: auto;
-  background-image: url('img/background-image1.jpg');
+  background-image: url('img/cityscape-metropolis.gif');
   background-size: cover;
   background-position: center;
   display: block;
@@ -109,14 +109,14 @@ header {
   color: limegreen;
   float: bottom;
 }
-#block.hit {
+/*#block.hit {
   width: 950px;
   height: 550px;
   margin: auto;
   background-image: url('img/background-image2.jpg');
   background-size: cover;
   background-position: center;
-  display: block;
+  display: block;*/
   /*cursor: url("img/target-cursor.png"), auto;*/
 }
 .missileUp {
