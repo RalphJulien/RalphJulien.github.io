@@ -1,16 +1,23 @@
 "use strict"
 jQuery(function() {
   console.log("Loaded");
+
+  var mission_start = new Audio('audio/captain_commando.mp3');
+  mission_start.play();
+  mission_start.loop = true;
   //Straight down is 375 px
   //Width is 900px
+ var images = ['cityscape-metropolis.gif', 'cityscape-nyc.gif', 'detroit.gif', 'futuristic_city.gif', 'las_vegas.gif', 'philadelphia.gif', 'toronto.gif'];
+ $('#block').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+
   var time = $('#block .pTimer')
   var humanScoreTag = $('#block .p1');
   var parasiteScoreTag = $('#block .p2');
   var wonMessage = $('#endMessageWon');
   var lostMessage = $('#endMessageLost');
-  // var hitSound = document.createElement('audio');
-    // hitSound.setAttribute('src', '../audio/18624.mp3');
-    // hitSound.setAttribute('autoplay', 'autoplay');
+  var burnSound = document.createElement('audio');
+    burnSound.setAttribute('src', 'audio/Laser_Shoot1.wav');
+    burnSound.setAttribute('autoplay', 'autoplay');
   time.hide();
   humanScoreTag.hide();
   parasiteScoreTag.hide();
@@ -72,8 +79,8 @@ jQuery(function() {
   }
   var decreaseParasiteScore = function() {
       parasiteScore = parasiteScore - 10;
-      console.log("Parasites Score: " + parasiteScore);
-      parasiteScoreTag.text("PARASITES Score: " + parasiteScore);
+      console.log("SWARM Score: " + parasiteScore);
+      parasiteScoreTag.text("SWARM Score: " + parasiteScore);
     }
     //
   var loadUp = function() {
@@ -140,7 +147,7 @@ jQuery(function() {
         // spore impact end
         // click spore begin
       spore.click(function() {
-        // hitSound.play();
+        burnSound.play();
         decreaseParasiteScore();
         increaseHumanScore();
         checkHumanWin();
