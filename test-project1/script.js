@@ -22,7 +22,7 @@ jQuery(function() {
       humanScoreTag.hide();
       parasiteScoreTag.hide();
       clearTimeout(loadUpInterval);
-      $('missile').remove();
+      $('spore').remove();
       return 'win';
 
     } else {
@@ -35,7 +35,7 @@ jQuery(function() {
       humanScoreTag.hide();
       parasiteScoreTag.hide();
       clearTimeout(loadUpInterval);
-      $('missile').remove();
+      $('spore').remove();
       return 'loss';
     } else {
       return 'keepPlaying';
@@ -77,7 +77,7 @@ jQuery(function() {
     }
     //
   var loadUp = function() {
-      var missile = $('<div class="missile"></div>');
+      var spore = $('<div class="spore"></div>');
 
       var bgFlash = function() {
         setInterval(function() {
@@ -88,11 +88,11 @@ jQuery(function() {
       var bSide;
       var cSide;
       var speed = 12000 - changeSpeed();
-      missile.appendTo(bg);
+      spore.appendTo(bg);
       var launchPoint = ((Math.random() * bg.width()));
-      missile.css("left", launchPoint);
+      spore.css("left", launchPoint);
       var angle = Math.floor(Math.random() * (45 - 1 + 1) + 1);
-      missile.css("transform", "rotate(" + angle + "deg)");
+      spore.css("transform", "rotate(" + angle + "deg)");
       var vector = function(ang, lp) {
           ang = ang - 180;
           aSide = 400;
@@ -108,21 +108,21 @@ jQuery(function() {
         }
         //
         //
-      missile.animate({
+      spore.animate({
         'left': +vector(angle, launchPoint) + 'px',
         'top': '+450px'
       }, speed);
-      //launch missile end
+      //launch spore end
       setTimeout(function() {
         //humanScoreTag.text("HUMAN RACE Score: " + humanScore);
-        missile.toggleClass('hitsploded');
+        spore.toggleClass('infect');
         setTimeout(function() {
           bgFlash();
-          $(this).toggleClass('hitsploded');
-          $(this).toggleClass('hitsploded2');
+          $(this).toggleClass('infect');
+          $(this).toggleClass('infect2');
           setTimeout(function() {
             console.log("Bang!");
-            missile.remove();
+            spore.remove();
           }.bind($(this)), 10);
         }.bind($(this)), 250)
         decreaseHumanScore();
@@ -130,32 +130,32 @@ jQuery(function() {
         console.log("Parasites Score: " + parasiteScore);
       }, 11000);
       var burnTimer1 = setInterval(function() {
-        missile.toggleClass('missile2');
-        missile.css("transform", "rotate(-" + 7 + "deg)");
+        spore.toggleClass('spore2');
+        spore.css("transform", "rotate(-" + 7 + "deg)");
       }, 250)
       var burnTimer2 = setInterval(function() {
-          missile.css("transform", "rotate(" + 7 + "deg)");
-          missile.toggleClass('missile3');
+          spore.css("transform", "rotate(" + 7 + "deg)");
+          spore.toggleClass('spore3');
         }, 250)
-        // missile impact end
-        // click missile begin
-      missile.click(function() {
+        // spore impact end
+        // click spore begin
+      spore.click(function() {
         // hitSound.play();
         decreaseParasiteScore();
         increaseHumanScore();
         checkHumanWin();
-        var missileUp = $("<div class='missileUp'></div>");
-        $('block').append(missileUp);
-        missileUp.animate({
+        var sporeUp = $("<div class='sporeUp'></div>");
+        $('block').append(sporeUp);
+        sporeUp.animate({
           'margin-top': '100px'
         }, 1000);
-        missileUp.remove();
+        sporeUp.remove();
         clearTimeout(burnTimer1);
         clearTimeout(burnTimer2);
-        $(this).toggleClass('sploded');
+        $(this).toggleClass('burn');
         setTimeout(function() {
-          $(this).toggleClass('sploded');
-          $(this).toggleClass('sploded2');
+          $(this).toggleClass('burn');
+          $(this).toggleClass('burn2');
           setTimeout(function() {
             console.log("removing", $(this));
             $(this).remove();

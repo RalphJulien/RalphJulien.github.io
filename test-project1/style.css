@@ -90,7 +90,7 @@ header {
   background-size: cover;
   background-position: center;
   display: block;
-  /*cursor: url("img/target-cursor.png"), auto;*/
+  cursor: url('img/red_crosshair.png') 25 15, auto;
 }
 #block .p1{
   font-family: "Lucida Console", Monaco, monospace;
@@ -119,16 +119,16 @@ header {
   display: block;*/
   /*cursor: url("img/target-cursor.png"), auto;*/
 }
-.missileUp {
+.sporeUp {
   position: absolute;
-  background-image: url('../img/missileUp.png');
+  background-image: url('img/virus.png');
   background-position: center;
   background-repeat: no-repeat;
   width: 32px;
   height: 32px;
   float: bottom;
 }
-.missile {
+.spore {
   position: absolute;
   background-image: url('img/virus.png');
   background-position: center;
@@ -138,7 +138,7 @@ header {
   /*transition: top 2s, left 2s;
   transition-timing-function: linear;*/
 }
-.missile2 {
+.spore2 {
   position: absolute;
   background-image: url('img/virus2.png');
   background-position: center;
@@ -148,7 +148,7 @@ header {
   /*transition: top 2s, left 2s;
   transition-timing-function: linear;*/
 }
-.missile3 {
+.spore3 {
   position: absolute;
   background-image: url('img/virus3.png');
   background-position: center;
@@ -158,7 +158,7 @@ header {
   /*transition: top 2s, left 2s;
   transition-timing-function: linear;*/
 }
-.sploded {
+.burn {
   position: absolute;
   background-image: url('img/explosion1.png');
   background-position: center;
@@ -168,7 +168,7 @@ header {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
-.sploded2 {
+.burn2 {
   position: absolute;
   background-image: url('img/explosion2.png');
   background-position: center;
@@ -178,7 +178,7 @@ header {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
-.hitsploded {
+.infect {
   position: absolute;
   background-image: url('img/green-splat.png');
   background-position: center;
@@ -188,7 +188,7 @@ header {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
-.hitsploded2 {
+.infect2 {
   position: absolute;
   background-image: url('img/green-splat.png');
   background-position: center;
@@ -198,7 +198,7 @@ header {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
-.hitsploded2 {
+/*.infect2 {
   position: absolute;
   background-image: url('img/green-splat.png');
   background-position: center;
@@ -207,7 +207,7 @@ header {
   height: 36px;
   transition: top 2s, left 2s;
   transition-timing-function: linear;
-}
+}*/
 #text{
   color: limegreen;
   font-size: 50;
