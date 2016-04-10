@@ -16,7 +16,7 @@ body, html {
 
 header{
   height: 100px;
-  font-family: arial;
+  font-family: impact;
   text-align: left;
   background-color: black;
   margin-bottom: 5px;
@@ -35,7 +35,7 @@ h1{
 }
 h1 {
   font-size: 36;
-  font-family: arial;
+  font-family: impact;
   color: limegreen;
 }
 
@@ -60,7 +60,7 @@ header {
   height: 350px;
   width: 800px;
   margin: auto;
-  font-family: arial;
+  font-family: "Lucida Console", Monaco, monospace;
   padding: 10px;
 }
 #endMessageWon{
@@ -69,7 +69,7 @@ header {
   height: 350px;
   width: 800px;
   margin: auto;
-  font-family: arial;
+  font-family: "Lucida Console", Monaco, monospace;
   padding: 10px;
 }
 #endMessageLost{
@@ -78,7 +78,7 @@ header {
   height: 350px;
   width: 800px;
   margin: auto;
-  font-family: arial;
+  font-family: "Lucida Console", Monaco, monospace;
   padding: 10px;
 }
 #block {
@@ -93,19 +93,19 @@ header {
   /*cursor: url("img/target-cursor.png"), auto;*/
 }
 #block .p1{
-  font-family: arial;
+  font-family: "Lucida Console", Monaco, monospace;
   margin-left: 30px;
   color: limegreen;
   float: left;
 }
 #block .p2{
-  font-family: arial;
+  font-family: "Lucida Console", Monaco, monospace;
   margin-right: 30px;
   color: limegreen;
   float: right;
 }
 #block .pTimer{
-  font-family: arial;
+  font-family: "Lucida Console", Monaco, monospace;
   color: limegreen;
   float: bottom;
 }
