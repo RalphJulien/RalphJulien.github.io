@@ -63,12 +63,12 @@ jQuery(function() {
   var increaseHumanScore = function() {
     humanScore = humanScore + 10;
     console.log("Humans Score: " + humanScore);
-    humanScoreTag.text("HUMAN RACE Score: " + humanScore);
+    humanScoreTag.text("HUMANS Score: " + humanScore);
   }
   var decreaseHumanScore = function() {
     humanScore = humanScore - 10;
     console.log("Humans Score: " + humanScore);
-    humanScoreTag.text("HUMAN RACE Score: " + humanScore);
+    humanScoreTag.text("HUMANS Score: " + humanScore);
   }
   var decreaseParasiteScore = function() {
       parasiteScore = parasiteScore - 10;
