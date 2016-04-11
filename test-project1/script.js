@@ -8,16 +8,19 @@ jQuery(function() {
   //Straight down is 375 px
   //Width is 900px
  var images = ['cityscape-metropolis.gif', 'cityscape-nyc.gif', 'detroit.gif', 'futuristic_city.gif', 'las_vegas.gif', 'philadelphia.gif', 'toronto.gif'];
- $('#block').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
+ $('#box').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
 
-  var time = $('#block .pTimer')
-  var humanScoreTag = $('#block .p1');
-  var parasiteScoreTag = $('#block .p2');
+
+
+
+  var time = $('#box .pTimer');
+  var humanScoreTag = $('#box .p1');
+  var parasiteScoreTag = $('#box .p2');
   var wonMessage = $('#endMessageWon');
   var lostMessage = $('#endMessageLost');
-  var burnSound = document.createElement('audio');
-    burnSound.setAttribute('src', 'audio/Laser_Shoot1.wav');
-    burnSound.setAttribute('autoplay', 'autoplay');
+  var laserSound = document.createElement('audio');
+    laserSound.setAttribute('src', 'audio/Laser_Shoot1.wav');
+    laserSound.setAttribute('autoplay', 'autoplay');
   time.hide();
   humanScoreTag.hide();
   parasiteScoreTag.hide();
@@ -50,7 +53,7 @@ jQuery(function() {
   };
   var parasiteScore;
   var humanScore;
-  var bg = $("#block");
+  var bg = $("#box");
   var speedUp = 0;
   var changeSpeed = function() {
     var roll1 = Math.floor(Math.random() * (5 - 1 + 1) + 1);
@@ -78,7 +81,7 @@ jQuery(function() {
     humanScoreTag.text("HUMANS Score: " + humanScore);
   }
   var decreaseParasiteScore = function() {
-      parasiteScore = parasiteScore - 10;
+      parasiteScore = parasiteScore - 5;
       console.log("SWARM Score: " + parasiteScore);
       parasiteScoreTag.text("SWARM Score: " + parasiteScore);
     }
@@ -86,11 +89,13 @@ jQuery(function() {
   var loadUp = function() {
       var spore = $('<div class="spore"></div>');
 
-      var bgFlash = function() {
-        setInterval(function() {
-          bg.toggleClass('hit');
-        }, 250);
-      };
+
+
+      // var bgFlash = function() {
+      //   setInterval(function() {
+      //     bg.toggleClass('hit');
+      //   }, 250);
+      // };
       var aSide;
       var bSide;
       var cSide;
@@ -124,14 +129,14 @@ jQuery(function() {
         //humanScoreTag.text("HUMAN RACE Score: " + humanScore);
         spore.toggleClass('infect');
         setTimeout(function() {
-          bgFlash();
+          // bgFlash();
           $(this).toggleClass('infect');
           $(this).toggleClass('infect2');
           setTimeout(function() {
-            console.log("Bang!");
+            console.log("Wrecked!");
             spore.remove();
           }.bind($(this)), 10);
-        }.bind($(this)), 250)
+        }.bind($(this)), 250);
         decreaseHumanScore();
         checkParasiteWin();
         console.log("Parasites Score: " + parasiteScore);
@@ -147,22 +152,22 @@ jQuery(function() {
         // spore impact end
         // click spore begin
       spore.click(function() {
-        burnSound.play();
+        laserSound.play();
         decreaseParasiteScore();
         increaseHumanScore();
         checkHumanWin();
-        var sporeUp = $("<div class='sporeUp'></div>");
-        $('block').append(sporeUp);
-        sporeUp.animate({
-          'margin-top': '100px'
-        }, 1000);
-        sporeUp.remove();
-        clearTimeout(burnTimer1);
-        clearTimeout(burnTimer2);
-        $(this).toggleClass('burn');
+        // var sporeUp = $("<div class='sporeUp'></div>");
+        // $('box').append(sporeUp);
+        // sporeUp.animate({
+        //   'margin-top': '100px'
+        // }, 1000);
+        // sporeUp.remove();
+        // clearTimeout(burnTimer1);
+        // clearTimeout(burnTimer2);
+        $(this).toggleClass('lasershot');
         setTimeout(function() {
-          $(this).toggleClass('burn');
-          $(this).toggleClass('burn2');
+          $(this).toggleClass('lasershot');
+          $(this).toggleClass('lasershot2');
           setTimeout(function() {
             console.log("removing", $(this));
             $(this).remove();

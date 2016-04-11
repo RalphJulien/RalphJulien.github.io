@@ -74,6 +74,7 @@ header {
 }
 #endMessageLost{
   background-color: black;
+  background-image: url('img/8-bit-nuke.gif');
   color: limegreen;
   height: 350px;
   width: 800px;
@@ -81,7 +82,7 @@ header {
   font-family: "Lucida Console", Monaco, monospace;
   padding: 10px;
 }
-#block {
+#box {
   position: absolute;
   width: 950px;
   height: 550px;
@@ -92,31 +93,31 @@ header {
   display: block;
   cursor: url('img/red_crosshair.png') 25 15, auto;
 }
-#block .p1{
+#box .p1{
   font-family: "Lucida Console", Monaco, monospace;
   margin-left: 30px;
   color: limegreen;
   float: left;
 }
-#block .p2{
+#box .p2{
   font-family: "Lucida Console", Monaco, monospace;
   margin-right: 30px;
   color: limegreen;
   float: right;
 }
-#block .pTimer{
+#box .pTimer{
   font-family: "Lucida Console", Monaco, monospace;
   color: limegreen;
   float: bottom;
 }
-/*#block.hit {
+/*#box.hit {
   width: 950px;
   height: 550px;
   margin: auto;
   background-image: url('img/background-image2.jpg');
   background-size: cover;
   background-position: center;
-  display: block;*/
+  display: box;*/
   /*cursor: url("img/target-cursor.png"), auto;*/
 }
 .sporeUp {
@@ -145,9 +146,10 @@ header {
   background-repeat: no-repeat;
   width: 32px;
   height: 32px;
-  /*transition: top 2s, left 2s;
-  transition-timing-function: linear;*/
 }
+  transition: top 2s, left 2s;
+  transition-timing-function: linear;
+
 .spore3 {
   position: absolute;
   background-image: url('img/virus3.png');
@@ -155,10 +157,12 @@ header {
   background-repeat: no-repeat;
   width: 32px;
   height: 32px;
+  }
+
   /*transition: top 2s, left 2s;
   transition-timing-function: linear;*/
-}
-.burn {
+
+.lasershot {
   position: absolute;
   background-image: url('img/explosion1.png');
   background-position: center;
@@ -168,7 +172,7 @@ header {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
-.burn2 {
+.lasershot2 {
   position: absolute;
   background-image: url('img/explosion2.png');
   background-position: center;
@@ -198,6 +202,7 @@ header {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }
+
 /*.infect2 {
   position: absolute;
   background-image: url('img/green-splat.png');
@@ -208,6 +213,7 @@ header {
   transition: top 2s, left 2s;
   transition-timing-function: linear;
 }*/
+
 #text{
   color: limegreen;
   font-size: 50;
