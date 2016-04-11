@@ -142,12 +142,12 @@ jQuery(function() {
         console.log("Parasites Score: " + parasiteScore);
       }, 11000);
       var burnTimer1 = setInterval(function() {
-        spore.toggleClass('spore2');
+        spore.toggleClass('spore');
         spore.css("transform", "rotate(-" + 7 + "deg)");
       }, 250)
       var burnTimer2 = setInterval(function() {
           spore.css("transform", "rotate(" + 7 + "deg)");
-          spore.toggleClass('spore3');
+          spore.toggleClass('spore');
         }, 250)
         // spore impact end
         // click spore begin
@@ -167,7 +167,7 @@ jQuery(function() {
         $(this).toggleClass('lasershot');
         setTimeout(function() {
           $(this).toggleClass('lasershot');
-          $(this).toggleClass('lasershot2');
+          $(this).toggleClass('lasershot');
           setTimeout(function() {
             console.log("removing", $(this));
             $(this).remove();
