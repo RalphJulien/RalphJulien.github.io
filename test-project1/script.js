@@ -53,17 +53,17 @@ jQuery(function() {
   var parasiteScore;
   var humanScore;
   var bg = $("#box");
-  // var speedUp = 0;
-  // var changeSpeed = function() {
-  //   var roll1 = Math.floor(Math.random() * (5 - 1 + 1) + 1);
-  //   var roll2 = Math.floor(Math.random() * (5 - 1 + 1) + 1);
-  //   if (roll1 === roll2) {
-  //     speedUp = roll1;
-  //   } else {
-  //     speedUp = 0;
-  //   }
-  //   return speedUp;
-  // }
+  var speedUp = 0;
+  var changeSpeed = function() {
+    var roll1 = Math.floor(Math.random() * (5 - 1 + 1) + 1);
+    var roll2 = Math.floor(Math.random() * (5 - 1 + 1) + 1);
+    if (roll1 === roll2) {
+      speedUp = roll1;
+    } else {
+      speedUp = 0;
+    }
+    return speedUp;
+  }
   var startGame = function() {
       humanScore = 300;
       parasiteScore = 600;
@@ -165,8 +165,8 @@ jQuery(function() {
         // clearTimeout(burnTimer2);
         $(this).toggleClass('lasershot');
         setTimeout(function() {
-          // $(this).toggleClass('lasershot');
-          // $(this).toggleClass('lasershot');
+          $(this).toggleClass('lasershot');
+          $(this).toggleClass('lasershot');
           setTimeout(function() {
             console.log("removing", $(this));
             $(this).remove();
