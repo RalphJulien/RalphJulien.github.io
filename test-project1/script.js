@@ -129,7 +129,7 @@ jQuery(function() {
         setTimeout(function() {
 
           $(this).toggleClass('infect');
-          $(this).toggleClass('infect2');
+          $(this).toggleClass('infect');
           setTimeout(function() {
             console.log("Wrecked!");
             spore.remove();
@@ -164,8 +164,8 @@ jQuery(function() {
         // clearTimeout(burnTimer2);
         $(this).toggleClass('lasershot');
         setTimeout(function() {
-          $(this).toggleClass('lasershot');
-          $(this).toggleClass('lasershot');
+          // $(this).toggleClass('lasershot');
+          // $(this).toggleClass('lasershot');
           setTimeout(function() {
             console.log("removing", $(this));
             $(this).remove();
@@ -175,7 +175,7 @@ jQuery(function() {
       });
     }
 
-  //Attach click handler that adds the "lasershot" class to spore when clicked.
+  //Attach click handler that adds "lasershot" class to spore when clicked.
 
   //After a spore has been clicked on, remove it from the DOM after a short delay.
 
