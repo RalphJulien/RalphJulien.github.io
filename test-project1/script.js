@@ -68,7 +68,7 @@ jQuery(function() {
       humanScore = 300;
       parasiteScore = 600;
     }
-    //
+
   var increaseHumanScore = function() {
     humanScore = humanScore + 10;
     console.log("Humans Score: " + humanScore);
@@ -84,7 +84,7 @@ jQuery(function() {
       console.log("SWARM Score: " + parasiteScore);
       parasiteScoreTag.text("SWARM Score: " + parasiteScore);
     }
-    //
+
   var loadUp = function() {
       var spore = $('<div class="spore"></div>');
 
@@ -116,8 +116,8 @@ jQuery(function() {
           bSide = Math.sqrt(bSide);
           return bSide + 300;
         }
-        //
-        //
+
+
       spore.animate({
         'left': +vector(angle, launchPoint) + 'px',
         'top': '+450px'
@@ -166,7 +166,7 @@ jQuery(function() {
         $(this).toggleClass('lasershot');
         setTimeout(function() {
           $(this).toggleClass('lasershot');
-          $(this).toggleClass('lasershot');
+          // $(this).toggleClass('lasershot');
           setTimeout(function() {
             console.log("removing", $(this));
             $(this).remove();
