@@ -5,8 +5,7 @@ jQuery(function() {
   var mission_start = new Audio('audio/captain_commando.mp3');
   mission_start.play();
   mission_start.loop = true;
-  //Straight down is 375 px
-  //Width is 900px
+
  var images = ['cityscape-metropolis.gif', 'cityscape-nyc.gif', 'detroit.gif', 'futuristic_city.gif', 'las_vegas.gif', 'philadelphia.gif', 'toronto.gif'];
  $('#box').css({'background-image': 'url(img/' + images[Math.floor(Math.random() * images.length)] + ')'});
 
@@ -89,13 +88,12 @@ jQuery(function() {
   var loadUp = function() {
       var spore = $('<div class="spore"></div>');
 
+      //Create a <div> with the class "spore" named "spore"
+
+      //Moves new spore to a random location
 
 
-      // var bgFlash = function() {
-      //   setInterval(function() {
-      //     bg.toggleClass('hit');
-      //   }, 250);
-      // };
+
       var aSide;
       var bSide;
       var cSide;
@@ -129,7 +127,7 @@ jQuery(function() {
         //humanScoreTag.text("HUMAN RACE Score: " + humanScore);
         spore.toggleClass('infect');
         setTimeout(function() {
-          // bgFlash();
+
           $(this).toggleClass('infect');
           $(this).toggleClass('infect2');
           setTimeout(function() {
@@ -176,9 +174,14 @@ jQuery(function() {
 
       });
     }
-    //
 
-  //
+  //Attach click handler that adds the "lasershot" class to spore when clicked.
+
+  //After a spore has been clicked on, remove it from the DOM after a short delay.
+
+  //checkHumanWin() that reads the DOM to check score. If parasite score is zero, load win screen.
+
+
   var loadUpInterval;
   var loadScreen = $('#loadScreen');
   bg.append(loadScreen);
@@ -198,5 +201,5 @@ jQuery(function() {
       window.reload();
     })
 
-  // }
+
 });
