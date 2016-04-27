@@ -1,0 +1,58 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0 0 0 0;
+  background-color: purple;
+}
+
+#p {
+  font-size: 500px;
+  text-align: right;
+  color: black;
+}
+
+div#square1 {
+  float: left;
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+  border: 10px solid black;
+  text-align: center;
+  font-size: 100px;
+  color: orange;
+}
+
+div#square2 {
+  float: left;
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  border: 10px solid black;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+}
+
+div#square3 {
+  float:left;
+  clear: left;
+  width: 300px;
+  height: 300px;
+  background-color: green;
+  border: 10px solid black;
+  text-align: center;
+  font-size: 100px;
+  color: pink;
+}
+
+div#square4 {
+  float: left;
+  clear: right;
+  width: 300px;
+  height: 300px;
+  background-color: yellow;
+  border: 10px solid black;
+  text-align: center;
+  font-size: 100px;
+  color: grey;
+}
