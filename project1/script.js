@@ -31,7 +31,7 @@
     var counter_three = 0;
     var counter_four = 0;
 
-
+    var squareArray = [
 
     var blueSquare = setInterval(function() {
       $("#square1").toggleClass('lightup');
@@ -67,6 +67,15 @@
         clearInterval(yellowSquare);
     }
 }, 500);
+    ];
+
+    // var squareArray = [blueSquare, redSquare, greenSquare, yellowSquare];
+
+    while (squareArray.length) {
+      squareArray.shift().call();
+    }
+
+
 
 
     // setTimeout(function() {
