@@ -3,18 +3,96 @@
       console.log("loaded");
     });
 
+    // var counterOne = 0;
+    // var blueSquare = setInterval(function() {
+    //   $("#square1").toggleClass('lightup');
+    // }, 1000);
 
-    var counterOne = 0;
-    $("#square1").click(function(){
-      if (counterOne === 0) {
-      $(this).css("background-color","black");
-      counterOne +=1;
+    // var counterOne = 0;
+    // setInterval(function() {
+    //   if (counterOne === 0) {
+    //   $("#square1").toggleClass('lightup');
+    // }, 500;
+    //   counterOne +=1;
+    // }
+    // else if (counterOne === 3) {
+    //   clearInterval();
+    // });
+
+    // clearInterval(blueSquare);
+
+    var evenNum_one = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
+    var evenNum_two = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
+    var evenNum_three = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
+    var evenNum_four = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
+
+    var counter_one = 0;
+    var counter_two = 0;
+    var counter_three = 0;
+    var counter_four = 0;
+
+
+
+    var blueSquare = setInterval(function() {
+      $("#square1").toggleClass('lightup');
+      counter_one++;
+      if(counter_one === evenNum_one) {
+        clearInterval(blueSquare);
     }
-    else if (counterOne === 1) {
-      $(this).css("background-color", "blue");
-      counterOne -=1;
+}, 500);
+
+
+    var redSquare = setInterval(function() {
+      $("#square2").toggleClass('lightup');
+      counter_two++;
+      if(counter_two === evenNum_two) {
+        clearInterval(redSquare);
     }
-    });
+}, 500);
+
+
+    var greenSquare = setInterval(function() {
+      $("#square3").toggleClass('lightup');
+      counter_three++;
+      if(counter_three === evenNum_three) {
+        clearInterval(greenSquare);
+    }
+}, 500);
+
+
+    var yellowSquare = setInterval(function() {
+      $("#square4").toggleClass('lightup');
+      counter_four++;
+      if(counter_four === evenNum_four) {
+        clearInterval(yellowSquare);
+    }
+}, 500);
+
+
+    // setTimeout(function() {
+    //   $("#square2").toggleClass('lightup');
+    // }, 500);
+
+    // setTimeout(function() {
+    //   $("#square3").toggleClass('lightup');
+    // }, 500);
+
+    // setTimeout(function() {
+    //   $("#square4").toggleClass('lightup');
+    // }, 500);
+
+
+    // var counterOne = 0;
+    // $("#square1").click(function(){
+    //   if (counterOne === 0) {
+    //   $(this).css("background-color","black");
+    //   counterOne +=1;
+    // }
+    // else if (counterOne === 1) {
+    //   $(this).css("background-color", "blue");
+    //   counterOne -=1;
+    // }
+    // });
 
     var counterTwo = 0;
     $("#square2").click(function(){

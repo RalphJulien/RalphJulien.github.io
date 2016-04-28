@@ -2,57 +2,51 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0 0 0 0;
-  background-color: purple;
-}
-
-#p {
-  font-size: 500px;
-  text-align: right;
-  color: black;
-}
-
-div#square1 {
-  float: left;
-  width: 300px;
-  height: 300px;
-  background-color: blue;
-  border: 10px solid black;
+  background-color: black;
   text-align: center;
-  font-size: 100px;
-  color: orange;
-}
-
-div#square2 {
-  float: left;
-  width: 300px;
-  height: 300px;
-  background-color: red;
-  border: 10px solid black;
-  text-align: center;
-  font-size: 100px;
+  background-size: cover;
+  background-position: center;
   color: white;
 }
 
-div#square3 {
-  float:left;
-  clear: left;
+
+
+div#square1 {
+  display: inline-block;
   width: 300px;
   height: 300px;
-  background-color: green;
-  border: 10px solid black;
-  text-align: center;
-  font-size: 100px;
-  color: pink;
+  background-color: navy;
+  border: 10px solid white;
 }
 
-div#square4 {
-  float: left;
-  clear: right;
+#square1.lightup {background-color: blue;}
+
+div#square2 {
+  display: inline-block;
   width: 300px;
   height: 300px;
-  background-color: yellow;
-  border: 10px solid black;
-  text-align: center;
-  font-size: 100px;
-  color: grey;
+  background-color: darkred;
+  border: 10px solid white;
 }
+
+#square2.lightup {background-color: red;}
+
+div#square3 {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background-color: limegreen;
+  border: 10px solid white;
+}
+
+#square3.lightup {background-color: lime;}
+
+div#square4 {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  background-color: gold;
+  border: 10px solid white;
+}
+
+#square4.lightup {background-color: yellow;}
