@@ -1,52 +1,58 @@
 html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0 0 0 0;
+
   background-color: black;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  color: white;
 }
 
-
-
-div#square1 {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  background-color: navy;
-  border: 10px solid white;
+.simon {
+  background-color: white;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
 }
 
-#square1.lightup {background-color: blue;}
-
-div#square2 {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
+.redSquare {
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: -50%;
+  position: relative;
   background-color: darkred;
-  border: 10px solid white;
 }
 
-#square2.lightup {background-color: red;}
+#redSquare.lightup {background-color: red;}
 
-div#square3 {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
-  background-color: limegreen;
-  border: 10px solid white;
+
+.blueSquare {
+  width: 50%;
+  height: 50%;
+  top: -50%;
+  left: 50%;
+  position: relative;
+  background-color: navy;
 }
 
-#square3.lightup {background-color: lime;}
+#blueSquare.lightup {background-color: blue;}
 
-div#square4 {
-  display: inline-block;
-  width: 300px;
-  height: 300px;
+
+.yellowSquare {
+  width: 50%;
+  height: 50%;
+  top: -100%;
+  position: relative;
   background-color: gold;
-  border: 10px solid white;
 }
 
-#square4.lightup {background-color: yellow;}
+#yellowSquare.lightup {background-color: yellow;}
+
+
+.greenSquare {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  background-color: limegreen;
+}
+
+#greenSquare.lightup {background-color: lime;}
+
+
+

@@ -69,6 +69,7 @@
 }, 500);
 
 
+
     // var squareArray = [blueSquare, redSquare, greenSquare, yellowSquare];
 
     // while (squareArray.length) {
