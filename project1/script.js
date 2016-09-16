@@ -35,6 +35,12 @@
       }, 300);
     }
 
+    var random_color = Math.floor(Math.random() * 4)+1;
+
+
+
+
+
     // var counterOne = 0;
     // var blueSquare = setInterval(function() {
     //   $("#square1").toggleClass('lightup');
