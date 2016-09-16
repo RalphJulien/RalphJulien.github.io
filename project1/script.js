@@ -3,6 +3,38 @@
       console.log("loaded");
     });
 
+    function newGame(){
+      var series = [1, 2, 1];
+      animate(series)
+    }
+
+    function animate(series){
+      //increment an index to keep track of the progression of the series array
+      var i = 0;
+
+      //JavaScript setInterval method to regulate the timing
+      var interval = setInterval(function(){
+        lightup(series[i]);
+
+        i++;
+
+        // when we reach the end of the series array, we clear the interval
+        if (i>=series.length){
+          clearInterval(interval);
+        }
+      }, 600);
+    }
+
+    function lightup(quad){
+      //this function adds the class "light"
+      var $quad = $('[square=' + quad +']').addClass('light');
+      window.setTimeout(function(){
+
+        //after 300ms timeout, the "light" class is removed, restoring the square to its normal color
+        $quad.removeClass('light');
+      }, 300);
+    }
+
     // var counterOne = 0;
     // var blueSquare = setInterval(function() {
     //   $("#square1").toggleClass('lightup');
@@ -21,52 +53,52 @@
 
     // clearInterval(blueSquare);
 
-    var evenNum_one = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
-    var evenNum_two = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
-    var evenNum_three = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
-    var evenNum_four = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
+//     var evenNum_one = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
+//     var evenNum_two = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
+//     var evenNum_three = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
+//     var evenNum_four = Math.floor( Math.random() * 10/ 2 ) * 2 + 2;
 
-    var counter_one = 0;
-    var counter_two = 0;
-    var counter_three = 0;
-    var counter_four = 0;
-
-
-
-    var blueSquare = setInterval(function() {
-      $("#square1").toggleClass('lightup');
-      counter_one++;
-      if(counter_one === evenNum_one) {
-        clearInterval(blueSquare);
-    }
-}, 500);
+//     var counter_one = 0;
+//     var counter_two = 0;
+//     var counter_three = 0;
+//     var counter_four = 0;
 
 
-    var redSquare = setInterval(function() {
-      $("#square2").toggleClass('lightup');
-      counter_two++;
-      if(counter_two === evenNum_two) {
-        clearInterval(redSquare);
-    }
-}, 500);
+
+//     var blueSquare = setInterval(function() {
+//       $("#square1").toggleClass('lightup');
+//       counter_one++;
+//       if(counter_one === evenNum_one) {
+//         clearInterval(blueSquare);
+//     }
+// }, 500);
 
 
-    var greenSquare = setInterval(function() {
-      $("#square3").toggleClass('lightup');
-      counter_three++;
-      if(counter_three === evenNum_three) {
-        clearInterval(greenSquare);
-    }
-}, 500);
+//     var redSquare = setInterval(function() {
+//       $("#square2").toggleClass('lightup');
+//       counter_two++;
+//       if(counter_two === evenNum_two) {
+//         clearInterval(redSquare);
+//     }
+// }, 500);
 
 
-    var yellowSquare = setInterval(function() {
-      $("#square4").toggleClass('lightup');
-      counter_four++;
-      if(counter_four === evenNum_four) {
-        clearInterval(yellowSquare);
-    }
-}, 500);
+//     var greenSquare = setInterval(function() {
+//       $("#square3").toggleClass('lightup');
+//       counter_three++;
+//       if(counter_three === evenNum_three) {
+//         clearInterval(greenSquare);
+//     }
+// }, 500);
+
+
+//     var yellowSquare = setInterval(function() {
+//       $("#square4").toggleClass('lightup');
+//       counter_four++;
+//       if(counter_four === evenNum_four) {
+//         clearInterval(yellowSquare);
+//     }
+// }, 500);
 
 
 

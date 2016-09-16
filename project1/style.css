@@ -1,6 +1,8 @@
 html, body {
 
   background-color: black;
+  color: white;
+  text-align: center;
 }
 
 .simon {
@@ -9,6 +11,15 @@ html, body {
   height: 600px;
   margin: 0 auto;
 }
+
+.greenSquare {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  background-color: limegreen;
+}
+
+#greenSquare.light {background-color: lime;}
 
 .redSquare {
   width: 50%;
@@ -19,7 +30,7 @@ html, body {
   background-color: darkred;
 }
 
-#redSquare.lightup {background-color: red;}
+#redSquare.light {background-color: red;}
 
 
 .blueSquare {
@@ -31,7 +42,7 @@ html, body {
   background-color: navy;
 }
 
-#blueSquare.lightup {background-color: blue;}
+#blueSquare.light {background-color: blue;}
 
 
 .yellowSquare {
@@ -42,17 +53,10 @@ html, body {
   background-color: gold;
 }
 
-#yellowSquare.lightup {background-color: yellow;}
+#yellowSquare.light {background-color: yellow;}
 
 
-.greenSquare {
-  width: 50%;
-  height: 50%;
-  position: relative;
-  background-color: limegreen;
-}
 
-#greenSquare.lightup {background-color: lime;}
 
 
 
