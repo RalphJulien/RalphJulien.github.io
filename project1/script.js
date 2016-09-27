@@ -37,17 +37,26 @@
 
     var random_color = Math.floor(Math.random() * 4)+1;
 
+    // wait for player to click start
+
+    // start a new round
+
     $('.start').click(function() {
       /* Act on the event */
 
       alert("New Round!");
 
+      // Add a random number (1-4) to the series
       series.push(random_color);
 
+      // Animate the sequence to the user
       newGame();
 
+      //Enable user interaction with the squares, and register any clicks on the Simon squares
       $('.simon').click(function(lightup) {
         /* Act on the event */
+
+      //While the player has not entered an incorrect response, and the number of clicks is less than the length of the series, wait for player input
 
       var squareClicks = [];
 
