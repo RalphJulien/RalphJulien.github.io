@@ -48,7 +48,6 @@
 
       $('.simon').click(function(lightup) {
         /* Act on the event */
-      });
 
       var squareClicks = [];
 
@@ -60,6 +59,9 @@
 
 
     });
+      });
+
+
 
 
 
