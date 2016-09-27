@@ -37,6 +37,30 @@
 
     var random_color = Math.floor(Math.random() * 4)+1;
 
+    $('.start').click(function() {
+      /* Act on the event */
+
+      alert("New Round!");
+
+      series.push(random_color);
+
+      newGame();
+
+      $('.simon').click(function(lightup) {
+        /* Act on the event */
+      });
+
+      var squareClicks = [];
+
+      var endRound = function(){
+        if (squareClicks != series){
+          alert("End of Round!");
+        }
+      }
+
+
+    });
+
 
 
 
