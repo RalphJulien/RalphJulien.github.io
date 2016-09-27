@@ -52,11 +52,11 @@
       // Animate the sequence to the user
       newGame();
 
-      //Enable user interaction with the squares, and register any clicks on the Simon squares
+      // Enable user interaction with the squares, and register any clicks on the Simon squares
       $('.simon').click(function(lightup) {
         /* Act on the event */
 
-      //While the player has not entered an incorrect response, and the number of clicks is less than the length of the series, wait for player input
+      // While the player has not entered an incorrect response, and the number of clicks is less than the length of the series, wait for player input
 
       var squareClicks = [];
 
