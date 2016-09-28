@@ -10,12 +10,9 @@
       animate(series)
     }
 
-    function animate(series){
-      //increment an index to keep track of the progression of the series array
-      var i = 0;
+    var i = 0;
 
-      //JavaScript setInterval method to regulate the timing
-      var interval = setInterval(function(){
+    var interval = setInterval(function(){
         lightup(series[i]);
 
         i++;
@@ -25,11 +22,22 @@
           clearInterval(interval);
         }
       }, 600);
+
+    function animate(series){
+      //increment an index to keep track of the progression of the series array
+      i;
+
+      //JavaScript setInterval method to regulate the timing
+      interval;
+
     }
 
+    //this function adds the class "light"
+    var $quad = $('[square=' + quad +']').addClass('light');
+
     function lightup(quad){
-      //this function adds the class "light"
-      var $quad = $('[square=' + quad +']').addClass('light');
+      $quad;
+
       window.setTimeout(function(){
 
         //after 300ms timeout, the "light" class is removed, restoring the square to its normal color
@@ -38,6 +46,14 @@
     }
 
     var random_color = Math.floor(Math.random() * 4)+1;
+
+    var squareClicks = [];
+
+    var endRound = function(){
+        if (squareClicks != series){
+          alert("End of Round!");
+        }
+      }
 
     // wait for player to click start
 
@@ -60,13 +76,7 @@
 
       // While the player has not entered an incorrect response, and the number of clicks is less than the length of the series, wait for player input
 
-      var squareClicks = [];
-
-      var endRound = function(){
-        if (squareClicks != series){
-          alert("End of Round!");
-        }
-      }
+      endRound()
 
 
     });
