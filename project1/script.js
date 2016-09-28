@@ -3,8 +3,10 @@
       console.log("loaded");
     });
 
+    var series = [1, 2, 1];
+
     function newGame(){
-      var series = [1, 2, 1];
+
       animate(series)
     }
 
