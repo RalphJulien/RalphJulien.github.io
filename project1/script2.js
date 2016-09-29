@@ -78,6 +78,7 @@
       //this "if" statement will only run if the player has finished the pattern correctly.
       //the first condition of this statement will check how many moves remain in the pattern. if 0 moves are left, it moves on to the next condition,
       //the second condition of this statement wil check to see if the clicked square was the right square. if it was, the function will execute.
+
       //if (player_moves.length === 0 && right) {}
 
       if (player_moves.length === 0 && right){
