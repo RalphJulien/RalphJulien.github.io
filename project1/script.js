@@ -62,7 +62,7 @@
     $('.start').click(function() {
       /* Act on the event */
 
-      alert("New Round!");
+      //alert("New Round!");
 
       // Add a random number (1-4) to the series
       series.push(random_color);
