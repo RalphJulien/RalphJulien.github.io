@@ -36,6 +36,11 @@
     //startRound: function(){}
 
     startRound: function(){
+
+      var computer_moves = [1,2,1];
+
+      animate(computer_moves);
+
       //when a new round begins, we + 1 to round_number, which keeps track of the round we're on.
       //$('[data-round]').text(++this.round_number);
       $('[data-round]').text(++this.round_number);
@@ -48,6 +53,34 @@
       //player_moves = computer_moves.slice(0);
       player_moves = computer_moves.slice(0);
     }
+
+    function animate(computer_moves) {
+      var i = 0;
+      var interval = setInterval(function(){
+        lightup(computer_moves[i]);
+
+        i++;
+
+        if (i>=computer_moves.length){
+          clearInterval(interval);
+        }
+      }, 600);
+    }
+
+    function lightup(quad){
+
+    //this function adds the class "light"
+    var $quad = $('[square=' + quad +']').addClass('light');
+
+    window.setTimeout(function(){
+
+        //after 300ms timeout, the "light" class is removed, restoring the square to its normal color
+        $quad.removeClass('light');
+      }, 300);
+
+    }
+
+    var randomColor = Math.floor(Math.random() * 4)+1;
 
 
 
